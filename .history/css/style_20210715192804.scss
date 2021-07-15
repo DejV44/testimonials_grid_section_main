@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+$ModerateViolet: hsl(263, 55%, 52%);
+$VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$VeryDarkBlackishBlue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+$LightGray: hsl(0, 0%, 81%);
+$LightGrayishBlue: hsl(210, 46%, 95%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: $LightGray;
+    
+
+    .container {
+        margin: 20px;
+        
+        .cards {
+            
+            padding: 2em;
+            border-radius: 7px;
+            box-shadow: rgba(128, 128, 128, 0.712) 0px 2px 10px;
+
+            &.violet {
+                background-color: $ModerateViolet;
+            }  
+            
+            &.darkgray {
+                background-color: $VeryDarkGrayishBlue;
+            }
+
+            &.lgblue {
+                background-color: $LightGrayishBlue;
+                p {
+                    color: $VeryDarkBlackishBlue;
+                }
+                blockquote {
+                    color: $VeryDarkGrayishBlue;
+                }
+                .image {
+                    h4 {
+                        color: $VeryDarkBlackishBlue;   
+                    }
+                    small {
+                        color: $VeryDarkGrayishBlue;
+                    }
+                }  
+            }
+            &.dbblue {
+                background-color: $VeryDarkBlackishBlue;
+            }
+
+
+            .image {
+                display: flex;
+                margin-bottom: 15px;
+                align-items: center;
+
+                img {
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+                    border: 1px solid $LightGray;
+                }
+                
+                h4 {
+                    color: $White;
+                    font-size: 13.5px;
+                    
+                }
+
+                small {
+                    color: $LightGray;
+                }
+            }
+
+            blockquote {
+                color: $LightGray;
+                padding-top: 20px;
+            }
+            p {
+                color: $White; 
+                font-size: 18px;  
+            }
+        }
+        
+    }
+
+@media (min-width: 640px) {
+    body {
+        .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        margin: 20px;
+        gap: 20px;
+        }
+    }
+}
+    
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+}
